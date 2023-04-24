@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>성빈의 도쿄여행기</title>
+
+		<style>
+
+			*{
+
+				margin: 0; padding: 0;
+
+				font-family: '맑은 고딕', 'Malgun Gothic', Gothic, sans-serif;
+
+			}
+
+			a {text-decoration: none;}
+
+			li {list-style: none;}
+
+			body {
+
+				width: 960px; margin: 0 auto;
+
+				background: #E6E6E6;
+
+				}
+
+			#page-wrapper{
+
+				background: white;
+
+				margin: 40px 0; padding: 10px 20px;
+
+				border-radius: 5px;
+
+				box-shadow: 0 4px 10px rgba(100, 100, 100, 0.3);
+
+			}
+
+			#main-header{padding: 40px 50px;}
+
+			.master-title{
+
+				font-size: 23px;
+
+				color: #181818;
+
+			}
+
+			.master-description{
+
+				font-size: 15px; font-weight: 500;
+
+				color: #383838;
+
+			}
+
+			
+
+			#main-navigation{
+
+				border-top: 1px solid #C8C8C8;
+
+				border-bottom: 1px solid #C8C8C8;
+
+				margin-bottom: 20px;
+
+				height: 40px;
+
+			}
+
+			.pull-left{float: left;}
+
+			.outer-menu-item{
+
+				float: left;
+
+				position: relative;
+
+			}
+
+			.menu-title{
+
+				display: block;
+
+				height: 30px; line-height: 30px;
+
+				text-align: center;
+
+				padding: 5px 20px;
+
+			}
+
+			.outer-menu-item:hover{
+
+				background:black;
+
+				color: white;
+
+			}
+
+			.pull-right{float:right;}
+
+			.search-bar{
+
+				height: 26px;
+
+				padding: 7px;
+
+			}
+
+			.input-search{
+
+				display: block;
+
+				float: left;
+
+				
+
+				background-color: #FFFFFF;
+
+				border: 1px solid #CCCCCC;
+
+				border-radius: 15px 0 0 15px;
+
+				box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+
+				
+
+				width: 120px; height: 24px;
+
+				padding: 0 0 0 10px;
+
+				font-size: 12px;
+
+				color: #555555;
+
+			}
+
+			.input-search-submit{
+
+				display: block;
+
+				float: left;
+
+				
+
+				width: 50px; height: 26px;
+
+				border-radius: 0 15px 15px 0;
+
+				border: 1px solid #CCCCCC;
+
+				
+
+				margin-left: -1px;
+
+				vertical-align: top;
+
+				display: inline-block;
+
+			}
+
+			.input-search:focus{
+
+				border-color: rgba(82,168,236, 0.8);
+
+				outline: 0;
+
+				box-shadow: inset 0 1px 1px rgba(0,0,0, 0.05);
+
+			}
+
+			.inner-menu{
+
+				display: none;
+
+				position: absolute;
+
+				top: 40px; left: 0;
+
+				width: 100%;
+
+				
+
+				background: white;
+
+				box-shadow: 0 2px 6px rgba(5,5,5, 0.9);
+
+				z-index: 1000;
+
+				
+
+				text-align: center;
+
+			}
+
+			.inner-menu-item > a {
+
+				display: block;
+
+				padding: 5px 10px;
+
+				color: black;
+
+			}
+
+			.inner-menu-item > a:hover{
+
+				background: black;
+
+				color: white;
+
+			}
+
+
+
+			#content{
+
+				overflow: hidden;
+
+				padding: 0 50px;
+
+			}
+
+			#main-section{
+
+				float: left;
+
+				width: 510px;
+
+			}
+
+			#main-aside{
+
+				float: right;
+
+				width: 200px;
+
+			}
+
+			article{
+
+				padding: 0 10px 20px 10px;
+
+				border-bottom: 1px solid #C8C8C8;
+
+			}
+
+			.article-header{padding: 20px 0;}
+
+			.article-title{
+
+				font-size: 25px;
+
+				font-weight: 500;
+
+				padding-bottom: 10px;
+
+			}
+
+			.article-date{font-size: 13px;}
+
+			.article-body{font-size: 14px;}
+
+			
+
+			.aside-list{padding: 10px 0 30px 0;}
+
+			.aside-list > h3{
+
+				font-size: 15px;
+
+				font-weight: 600;
+
+			}
+
+			.aside-list li a{
+
+				margin-left: 8px;
+
+				font-size: 13px;
+
+				color: #6C6C6C;
+
+			}
+
+			#main-footer{
+
+				padding: 10px 50px;
+
+			}
+
+            .img01 {
+                width: 80%;
+                height: 80%;
+            }
+
+		</style>
+
+		
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+		<script>
+
+			$(document).ready(function () {
+
+				$('.outer-menu-item').hover(function () {
+
+					$(this).find('.inner-menu').show();
+
+					}, function () {
+
+				$(this).find('.inner-menu').hide();
+
+				});
+
+			});
+
+		</script>
+
+	</head>
+
+	
+
+	<body>
+
+		<div id="page-wrapper">
+
+			<header id="main-header">
+
+				<hgroup>
+
+					<h1 class="master-title">성빈의 도쿄여행기</h1>
+
+					<h2 class="master-description">블로그</h2>
+
+				</hgroup>
+
+				<nav id="main-navigation">
+
+					<div class="pull-left">
+
+						<ul class="outer-menu">
+
+							<li class="outer-menu-item">
+
+								<span class="menu-title">도쿄여행기</span>
+
+								<ul class="inner-menu">
+
+                                    <li class="inner-menu-item"><a href="file:///C:/Users/SEONGBIN/Desktop/%EA%B3%BC%EC%A0%9Ctest/%EB%A9%94%EC%9D%B8.html">메인</a></li>
+
+                                    <li class="inner-menu-item"><a href="file:///C:/Users/SEONGBIN/Desktop/%EA%B3%BC%EC%A0%9Ctest/%EC%9E%90%EA%B8%88%EC%A4%80%EB%B9%84.html">자금준비</a></li>
+
+                                    <li class="inner-menu-item"><a href="file:///C:/Users/SEONGBIN/Desktop/%EA%B3%BC%EC%A0%9Ctest/%EC%B6%9C%EB%B0%9C%EC%A4%80%EB%B9%84.html">출발준비</a></li>
+
+									<li class="inner-menu-item"><a href="file:///C:/Users/SEONGBIN/Desktop/%EA%B3%BC%EC%A0%9Ctest/1%EC%9D%BC%EC%B0%A8.html">1일차</a></li>
+
+									<li class="inner-menu-item"><a href="file:///C:/Users/SEONGBIN/Desktop/%EA%B3%BC%EC%A0%9Ctest/2%EC%9D%BC%EC%B0%A8.html">2일차</a></li>
+
+                                    <li class="inner-menu-item"><a href="file:///C:/Users/SEONGBIN/Desktop/%EA%B3%BC%EC%A0%9Ctest/3%EC%9D%BC%EC%B0%A8.html">3일차</a></li>
+
+                                    <li class="inner-menu-item"><a href="file:///C:/Users/SEONGBIN/Desktop/%EA%B3%BC%EC%A0%9Ctest/4%EC%9D%BC%EC%B0%A8.html">4일차</a></li>
+
+                                    <li class="inner-menu-item"><a href="file:///C:/Users/SEONGBIN/Desktop/%EA%B3%BC%EC%A0%9Ctest/%EB%A7%88%EC%A7%80%EB%A7%89%20%EC%9D%BC%EC%B0%A8.html">마지막 일차</a></li>
+
+								</ul>
+
+							</li>
+
+						</ul>
+
+					</div>
+
+					<div class="pull-right">
+
+						<div class="search-bar">
+
+							<form>
+
+								<input type="text" class="input-search" />
+
+								<input type="submit" class="input-search-submit" value="검색" />
+
+							</form>
+
+						</div>
+
+					</div>
+
+				</nav>
+
+			</header>
+
+			<div id="content">
+
+				<section id="main-section">
+
+					<article>
+
+						<div class="article-header">
+
+							<h1 class="article-title">나의 도쿄여행기</h1>
+
+							<p class="article-date">3일차</p>
+
+						</div>
+
+						<div class="article-body">
+                            <img class="img01" src="img/day3/20230123_103207_172.jpg" />
+                            <img class="img01" src="img/day3/20230123_105806.jpg" />
+                            <p><br>3일차는 아침에 일어나서 오차노미즈로 향했습니다.<br><br>
+                            오차노미즈는 도쿄에서 가장 규모가 큰 악기거리가 있는걸로 유명합니다.<br></p><br>
+                            <img class="img01" src="img/day3/20230123_124918.jpg" />
+                            <img class="img01" src="img/day3/20230123_124940.jpg" />
+                            <img class="img01" src="img/day3/20230123_144231_486.jpg" />
+                            <p><br>그런 다음 오차노미즈에서 아키하바라로 향했습니다.<br></p><br>
+                            <img class="img01" src="img/day3/20230123_130311_181.jpg" />
+                            <p><br>"아키하바라에서 아침 겸 점심으로 먹었던 돈카츠 카레"<br></p><br>
+                            <img class="img01" src="img/day3/20230123_200100.jpg" />
+                            <p><br>아키하바라를 구경하고 기념품들도 사고 그런다음 도쿄 텔레포트역에 가서<br><br>
+                            실물 사이즈 건담모형도 구경하고 저녁도 먹고 옷이랑 신발도 쇼핑했습니다.<br><br>
+                            그런 다음 다시 시부야로 향했습니다.<br><br>
+                            시부야 스카이 전망대를 에약했기 때문입니다.</p><br>
+                            <img class="img01" src="img/day3/20230123_210058_732.jpg" />
+                            <p><br>"시부야 스카이에서 내려다 본 시부야 스크램블"<br></p><br>
+                            <img class="img01" src="img/day3/20230123_212029.jpg" />
+                            <p><br>시부야 스카이 전망대에서 내려다본 도쿄 야경<br><br>
+                            시부야 스카이 전망대는 45층짜리 타워에 있는 유명한 전망대입니다.<br><br>
+                            이 역시 30분정도 줄서서 기다린 보람이 있던 추억이었습니다.<br></p><br>
+                            
+
+							<br />
+                            <br />
+
+
+							<br />
+
+
+						</div>
+
+					</article>
+
+				</section>
+
+				<aside id = "main-aside">
+
+					<div class="aside-list">
+
+						<h3>카테고리</h3>
+
+						<ul>
+
+                            <li><a href="file:///C:/Users/SEONGBIN/Desktop/%EA%B3%BC%EC%A0%9Ctest/%EB%A9%94%EC%9D%B8.html">메인</a></li>
+
+							<li><a href="file:///C:/Users/SEONGBIN/Desktop/%EA%B3%BC%EC%A0%9Ctest/%EC%9E%90%EA%B8%88%EC%A4%80%EB%B9%84.html">자금준비</a></li>
+
+							<li><a href="file:///C:/Users/SEONGBIN/Desktop/%EA%B3%BC%EC%A0%9Ctest/%EC%B6%9C%EB%B0%9C%EC%A4%80%EB%B9%84.html">출발준비</a></li>
+
+							<li><a href="file:///C:/Users/SEONGBIN/Desktop/%EA%B3%BC%EC%A0%9Ctest/1%EC%9D%BC%EC%B0%A8.html">1일차</a></li>
+
+                            <li><a href="file:///C:/Users/SEONGBIN/Desktop/%EA%B3%BC%EC%A0%9Ctest/2%EC%9D%BC%EC%B0%A8.html">2일차</a></li>
+
+                            <li><a href="file:///C:/Users/SEONGBIN/Desktop/%EA%B3%BC%EC%A0%9Ctest/3%EC%9D%BC%EC%B0%A8.html">3일차</a></li>
+
+                            <li><a href="file:///C:/Users/SEONGBIN/Desktop/%EA%B3%BC%EC%A0%9Ctest/4%EC%9D%BC%EC%B0%A8.html">4일차</a></li>
+
+                            <li><a href="file:///C:/Users/SEONGBIN/Desktop/%EA%B3%BC%EC%A0%9Ctest/%EB%A7%88%EC%A7%80%EB%A7%89%20%EC%9D%BC%EC%B0%A8.html">마지막 일차</a></li>
+
+						</ul>
+
+					</div>
+
+				</aside>
+
+			</div>			
+
+
+		</div>
+
+	</body>
+
+</html>
